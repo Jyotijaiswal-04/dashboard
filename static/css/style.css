@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", serif;
+}
+#container {
+  background-color: hsl(0, 0%, 11%);
+  gap: 20px;
+}
+/* sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-y: auto;
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: 0.5s ease all;
+  opacity: 1;
+}
+.wrap.active #sidebar {
+  margin-left: -250px;
+  opacity: 0;
+}
+#sidebar::-webkit-scrollbar {
+  display: none;
+}
+#sidebar .sidebar-nav {
+  margin-top: 20px;
+}
+#sidebar .sidebar-nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+  cursor: pointer;
+}
+#sidebar .sidebar-nav li a {
+  color: white;
+  text-decoration: none;
+}
+#sidebar .sidebar-nav li i {
+  margin-right: 20px;
+}
+#toggle-sidebar i {
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+.sidebar-brand img {
+  width: 170px;
+  height: auto;
+}
+
+/* main content */
+#main-content {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: 100vh;
+  overflow-y: auto;
+  transition: 0.5s ease all;
+}
+.wrap.active #main-content {
+  left: 0;
+  width: 100%;
+}
+
+/* header */
+.header {
+  color: white;
+
+  padding-bottom: 10px;
+  background-color: #333;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header .nav input {
+  padding: 10px;
+  width: 230px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.22);
+  border: none;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+.nav input::placeholder {
+  color: white;
+  font-size: 18px;
+  opacity: 0.7;
+}
+.header .nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.header .nav ul a {
+  color: white;
+  text-decoration: none;
+}
+.header .nav .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header .nav .user-profile i {
+  font-size: 25px;
+  color: #f0e3e375;
+}
+.header .nav .user-profile a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(245, 236, 110);
+}
+.leftdiv {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+}
+/* content */
+/* card design */
+.content {
+  padding: 20px;
+  background-color: hsl(0, 0%, 11%);
+  color: #f1f1f1;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 10px;
+}
+.content .div-card {
+  height: 250px;
+  width: 100%;
+  background-image: url("https://www.jqueryscript.net/images/animated-bubble-background.jpg?v5");
+  background-size: cover;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+  color: black;
+  gap: 50px;
+}
+.content .div-card .amount {
+  font-size: 2em;
+  font-weight: bold;
+}
+.content .div-card .date {
+  padding-top: 50px;
+}
+
+.content .div-card:nth-child(2) {
+  background-image: url("https://bbbootstrap.github.io/bbimages/images/zFvAkzJ.jpg");
+  background-size: cover;
+  opacity: 0.6;
+}
+.content .div-card:nth-child(3) {
+  background-image: url("https://cdn.pixabay.com/photo/2023/04/13/05/18/green-bubbles-7921711_1280.png");
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.content .div-card:nth-child(4) {
+  background-image: url("https://png.pngtree.com/background/20210715/original/pngtree-pink-gradient-simple-bubble-background-picture-image_1306178.jpg");
+  background-size: cover;
+  opacity: 0.6;
+}
+/* chart wrapper */
+.content .card-wrapper .icon {
+  font-size: 20px;
+}
+
+.chart-wrapper {
+  padding-top: 20px;
+  display: flex;
+  gap: 40px;
+}
+.chart-wrapper #chart {
+  width: 45%;
+  height: 230px;
+}
+.chart-wrapper #chart1 {
+  width: 650px;
+  height: 350px;
+}
+/* chart code */
+.chart-content {
+  padding: 50px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.piechart {
+  width: auto;
+  height: 300px;
+  background-color: #1f383f75;
+}
+.piechart1 {
+  width: auto;
+  height: autopx;
+  background-color: #1f383f75;
+}
+
+.linechart-content {
+  padding: 50px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* calendar */

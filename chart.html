@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <!-- <link rel="stylesheet" href="./static/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- sidebar -->
+      <div class="wrap active">
+        <div id="sidebar">
+          <div class="sidebar-brand">
+            <!-- <h1>Dashboard</h1> -->
+            <img src="./static/image/Logo.png" alt="Logo" />
+          </div>
+          <ul class="sidebar-nav">
+            <li>
+              <a href="./index.html" class="active">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fas fa-chart-bar"></i> Analytics </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fas fa-user"></i> Users </a>
+            </li>
+            <li>
+              <a href="./chart.html">
+                <i class="fal fa-chart-line"></i>Chart
+              </a>
+            </li>
+            <li>
+              <a href="./calendar.html">
+                <i class="fas fa-file"></i> Calendar
+              </a>
+            </li>
+            <li>
+              <a href="./index.html"> <i class="fal fa-sd-card"></i> Card</a>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+
+        <!-- main-content  -->
+        <div id="main-content">
+          <!-- header -->
+          <div class="header">
+            <div class="nav">
+              <div class="leftdiv">
+                <div id="toggle-sidebar"><i class="fal fa-bars"></i></div>
+                <input type="search" placeholder="search..." />
+              </div>
+
+              <div class="user-profile">
+                <i class="far fa-user text-dark"></i>
+
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- content-page -->
+          <div class="content">
+            <h3>Dashboard!</h3>
+            <div class="chart-content">
+              <div id="pie-chart1" class="piechart"></div>
+              <div id="pie-chart2" class="piechart"></div>
+              <div id="pie-chart3" class="piechart"></div>
+            </div>
+
+            <div class="linechart-content">
+              <div id="line-chart1" class="piechart1"></div>
+              <div id="line-chart2" class="piechart1"></div>
+              <div id="line-chart3" class="piechart1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- <script src="./static/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./static/js/app.js"></script>
+    <script>
+      piechart1();
+      piechart2();
+      piechart3();
+      linechart1();
+      linechart2();
+      linechart3();
+    </script>
+  </body>
+</html>
